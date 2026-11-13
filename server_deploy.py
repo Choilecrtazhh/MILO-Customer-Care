@@ -41,8 +41,9 @@ def answer(message):
         return "Đây là chatbot mô phỏng phục vụ bài tập. Website chưa có kết nối nhân viên trực tiếp. Bạn có thể liên hệ kênh chăm sóc khách hàng chính thức của nhà sản xuất được công bố trên bao bì."
     if any(x in q for x in ["cảm ơn", "thanks"]):
         return "Rất vui được hỗ trợ bạn! Bạn còn muốn tìm hiểu điều gì về MILO không?"
-    return "Mình chưa hiểu rõ câu hỏi. Bạn có thể hỏi về: các loại MILO, thành phần, cách pha, bảo quản, nơi mua, giá/khuyến mãi hoặc phản ánh sản phẩm nhé."
-
+    if any(x in q for x in ["milo là gì", "giới thiệu về milo", "milo là thức uống gì"]): 
+        return " MILO là thức uống lúa mạch với hương vị thơm ngon, phù hợp để bổ sung vào chế độ dinh dưỡng hằng ngày."
+    return "Mình chưa hiểu rõ câu hỏi của bạn. 💚 Bạn có thể hỏi mình về các loại MILO, thành phần dinh dưỡng, công dụng, cách pha, cách bảo quản, nơi mua, giá và khuyến mãi hoặc các thông tin liên quan đến sản phẩm MILO nhé! 🥛✨ Mình luôn sẵn sàng hỗ trợ bạn!"
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(WEB), **kwargs)
