@@ -45,7 +45,7 @@ def answer(message):
         return " MILO là thức uống lúa mạch với hương vị thơm ngon, phù hợp để bổ sung vào chế độ dinh dưỡng hằng ngày."
     if any(X in q for X in ["thành phần milo", "dinh dưỡng milo", "milo có chất là gì", "milo gồm những gì"]):
         return "Thành phần MILO tùy theo từng dòng sản phẩm, có thể bao gồm lúa mạch, sữa, cacao, vitamin và khoáng chất. Hãy kiểm tra bao bì để biết thông tin chính xác nhé!" 
-        if any(X in q for X in [" Milo là gì", "giới thiệu milo", " mILO LẦ GÌ VẬY"]):
+        if any(X in q for X in [" Milo là gì", "giới thiệu milo", "Milo là gì vậy"]):
         return "Milo là thức uống lúa mạch mang đến hương vị thơm ngon và nguồn dinh dưỡng cho ngày năng động!"    
     return "Mình chưa hiểu rõ câu hỏi của bạn. 💚 Bạn có thể hỏi mình về các loại MILO, thành phần dinh dưỡng, công dụng, cách pha, cách bảo quản, nơi mua, giá và khuyến mãi hoặc các thông tin liên quan đến sản phẩm MILO nhé! 🥛✨ Mình luôn sẵn sàng hỗ trợ bạn!"
 class Handler(SimpleHTTPRequestHandler):
