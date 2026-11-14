@@ -49,6 +49,8 @@ def answer(message):
         return "Milo là thức uống lúa mạch mang đến hương vị thơm ngon và nguồn dinh dưỡng cho ngày năng động!"
     if any(X in q for X in ["Cách pha", "pha như thế nào", "pha milo"]):
         return "bạn hãy làm theo tỉ lệ và hướng dẫn trên bao bì sản phẩm milo đang sử dụng có thể điều chỉnh lượng nước hoặc sửa theo khẩu vị nhé!"
+     if any(X in q for X in ["bảo quản", "để tủ lạnh", "mở hộp", "hạn sử dụng"]):
+         return "bạn hãy bảo quản theo hướng dẫn trên bao bì ,tránh nơi nóng và ánh sáng trực tiếp."
     return "Mình chưa hiểu rõ câu hỏi của bạn. 💚 Bạn có thể hỏi mình về các loại MILO, thành phần dinh dưỡng, công dụng, cách pha, cách bảo quản, nơi mua, giá và khuyến mãi hoặc các thông tin liên quan đến sản phẩm MILO nhé! 🥛✨ Mình luôn sẵn sàng hỗ trợ bạn!"
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
